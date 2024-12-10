@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro e Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3f2fd; /* Azul claro */
+            color: #0d47a1; /* Azul escuro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #1976d2;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #1976d2;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        input:focus {
+            outline: none;
+            border-color: #0d47a1;
+            box-shadow: 0 0 5px #0d47a1;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #0288d1; /* Azul mais intenso */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0277bd; /* Azul mais escuro */
+        }
+        .toggle {
+            margin-top: 10px;
+            text-align: center;
+            color: #1976d2;
+            cursor: pointer;
+        }
+        .toggle:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 id="form-title">Cadastro</h1>
+    <form id="auth-form" onsubmit="handleSubmit(event)">
+        <label for="username">Nome de Usuário</label>
+        <input type="text" id="username" name="username" required placeholder="Digite seu nome de usuário">
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" required placeholder="Digite sua senha">
+
+        <button type="submit">Cadastrar</button>
+    </form>
+    <p class="toggle" onclick="toggleForm()">Já tem uma conta? Faça login</p>
+</div>
+
+<script>
+    let isLogin = false;
+
+    function toggleForm() {
+        isLogin = !isLogin;
+        const formTitle = document.getElementById('form-title');
+        const form = document.getElementById('auth-form');
+        const toggleText = document.querySelector('.toggle');
+
+        if (isLogin) {
+            formTitle.textContent = 'Login';
+            form.innerHTML = `
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required placeholder="Digite sua senha">
+
+                <button type="submit">Entrar</button>
+            `;
+            toggleText.textContent = 'Não tem uma conta? Cadastre-se';
+        } else {
+            formTitle.textContent = 'Cadastro';
+            form.innerHTML = `
+                <label for="username">Nome de Usuário</label>
+                <input type="text" id="username" name="username" required placeholder="Digite seu nome de usuário">
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required placeholder="Digite sua senha">
+
+                <button type="submit">Cadastrar</button>
+            `;
+            toggleText.textContent = 'Já tem uma conta? Faça login';
+        }
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        const message = isLogin ? 'Login realizado com sucesso!' : 'Cadastro realizado com sucesso!';
+        alert(message);
+    }
+</script>
+
+</body>
+</html>

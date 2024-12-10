@@ -1,0 +1,28 @@
+.assuntos h4 {
+    color: var(--color-neutral-0);
+    font-size: 25px;
+    text-align: left;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.assuntos p{
+    font-size: 20px;
+    text-align: left;
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.navega{
+    color: var(--color-neutral-0);
+    font-size: 25px;
+    text-align: center;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.navega h4{
+    display: inline-flex;
+}
+.navega h3{
+    text-align: center;
+    padding: 20px;
+}

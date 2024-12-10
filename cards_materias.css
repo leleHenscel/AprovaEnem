@@ -1,0 +1,20 @@
+body {
+    background-color: #f0f0f0;
+}
+
+/*cards*/
+.card {
+    width: 1400px;
+    margin: 5%;
+    padding: 20px;
+    background-color: white;
+    margin-top: 50px;
+    border-radius: 5px;
+    font-weight: 300;
+}
+
+.card h1 {
+    position: center;
+    list-style-position: inside;
+}
+/*cards*/

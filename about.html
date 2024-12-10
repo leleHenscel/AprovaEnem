@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3f2fd; /* Azul claro */
+            color: #0d47a1; /* Azul escuro */
+            line-height: 1.6;
+        }
+        header {
+            background-color: #1976d2; /* Azul médio */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+        .about-card {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .about-card:hover {
+            transform: scale(1.05);
+        }
+        .about-card h2 {
+            margin-top: 0;
+            color: #1976d2;
+        }
+        .highlight {
+            color: #0288d1;
+            font-weight: bold;
+        }
+        .cta-button {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0288d1;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #0277bd;
+        }
+        footer {
+            background-color: #1976d2;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            .about-card {
+                padding: 15px;
+            }
+            .cta-button {
+                width: 100%;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Sobre Nós</h1>
+    <p>Conheça nossa missão e propósito.</p>
+</header>
+
+<div class="container">
+    <div class="about-card">
+        <h2>Quem Somos?</h2>
+        <p>
+            Somos uma plataforma dedicada a ajudar estudantes de todo o Brasil a conquistarem seus sonhos por meio do <span class="highlight">ENEM</span>. 
+            Nossa missão é tornar o aprendizado mais <span class="highlight">acessível</span>, 
+            <span class="highlight">efetivo</span> e <span class="highlight">inspirador</span>.
+        </p>
+    </div>
+
+    <div class="about-card">
+        <h2>Nossa Missão</h2>
+        <p>
+            Capacitar você para alcançar o sucesso no ENEM, oferecendo <span class="highlight">recursos de alta qualidade</span>, 
+            <span class="highlight">métodos inovadores</span> e um <span class="highlight">apoio contínuo</span> para superar os desafios dessa jornada.
+        </p>
+    </div>
+
+    <div class="about-card">
+        <h2>Como Fazemos Isso?</h2>
+        <p>
+            Criamos conteúdos interativos, simulados e estratégias personalizadas para que você possa estudar de forma 
+            <span class="highlight">organizada</span> e com <span class="highlight">confiança</span>. Nossa equipe está aqui para te ajudar em cada etapa!
+        </p>
+        <a href="../AprovaEnem/metodos.html" class="cta-button">Veja nossos métodos de estudo</a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Plataforma de Estudos para o ENEM. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>

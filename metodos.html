@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <title>AprovaEnem</title>
+    
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300&family=Poppins:wght@500&display=swap');
+        </style>
+    </head>
+    <body>
+    <style>
+        {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e3f2fd;
+            color: #0d47a1;
+        }
+        header {
+            background-color: #1976d2;
+            color: black;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .card {
+            background-color: #bbdefb;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .card h3 {
+            margin: 0;
+        }
+        .card p {
+            display: none;
+            margin-top: 10px;
+        }
+        .card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background-color: #1976d2;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+<header>
+    <h1>Métodos de Estudo para o ENEM</h1>
+    <p>Dicas práticas para organizar seus estudos e alcançar seus objetivos.</p>
+</header>
+
+<div class="container">
+    <div class="card" onclick="toggleContent(this)">
+        <h3>1. Planejamento</h3>
+        <p>Crie um cronograma de estudos que inclua todas as disciplinas e respeite seu ritmo. Estabeleça metas diárias e semanais realistas.</p>
+    </div>
+    <div class="card" onclick="toggleContent(this)">
+        <h3>2. Prática Constante</h3>
+        <p>Resolva provas anteriores e simulados para se familiarizar com o estilo das questões do ENEM.</p>
+    </div>
+    <div class="card" onclick="toggleContent(this)">
+        <h3>3. Use Técnicas de Memorização</h3>
+        <p>Aproveite recursos visuais como mapas mentais, resumos coloridos e flashcards para facilitar a retenção do conteúdo.</p>
+    </div>
+    <div class="card" onclick="toggleContent(this)">
+        <h3>4. Atualidades</h3>
+        <p>Leia notícias e acompanhe debates sobre temas atuais. Isso é essencial para a redação e questões de Ciências Humanas.</p>
+    </div>
+    <div class="card" onclick="toggleContent(this)">
+        <h3>5. Cuide de Si Mesmo</h3>
+        <p>Mantenha uma alimentação equilibrada, hidrate-se e reserve tempo para descansar. A saúde mental é fundamental para o sucesso.</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Guia de Estudos ENEM. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    function toggleContent(card) {
+        const content = card.querySelector("p");
+        if (content.style.display === "none" || content.style.display === "") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
+    }
+</script>
+
+    </body>
+</html>

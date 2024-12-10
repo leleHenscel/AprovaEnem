@@ -1,0 +1,123 @@
+:root{
+    --color-neutral-0: #006080;
+    --color-neutral-10: #EDEEE9;
+    --color-neutral-20: #0294c5;
+    --color-neutral-30: #F8B300;
+}
+
+main h3{
+    color: var(--color-neutral-0);
+    font-size: 30px;
+    text-align: left;
+    margin-left: 15px;
+    margin-top: 20px;
+
+}
+
+#simbolo{
+    margin-top: 50px;
+    font-size: 170px;    
+    color: var(--color-neutral-20);
+    text-align: center;
+
+}
+
+
+#texto-simbolo h2{
+    text-align: left;
+    font-size: 60px;
+    text-align: center;
+    margin-top: -30px;
+}
+
+#texto-simbolo p{
+    margin-top: 10px;
+}
+.tudo-dos-assuntos {
+    margin-left: 40px;
+    margin-right: 40px ;
+}
+
+h4 a{ 
+    border: solid;
+    border-color: var(--color-neutral-0);
+    background-color: var(--color-neutral-10);
+    border-radius: 6px;   
+    padding: 20px 10px 20px 10px;
+    margin: 15px 15px 15px 15px;
+    border-width: 1px;
+    transition: 0.5s;
+    color: var(--color-neutral-0);
+    text-align: center;
+    box-shadow: 5px 5px var(--color-neutral-20); 
+}
+
+h4:hover a{
+    border-color: var(--color-neutral-30);
+    background-color: var(--color-neutral-30);
+    color: var(--color-neutral-10);
+    cursor: pointer ;
+    
+}
+
+.assuntos h4 {
+    display: inline-flex;
+    margin-bottom: 15px;
+}
+
+@media(max-width: 600px){
+    .assuntos{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin: 7px 7px 7px 7px;
+    }
+
+    section{
+        height: 80vh;
+    }
+
+}
+
+@media(max-width: 500px){
+    .assuntos a{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    h4 a{
+        text-align: center;
+    }
+
+     main h3{
+        text-align: center;
+    }
+
+    section{
+        height: 250vh;
+    }
+}
+
+@media(max-width: 500px){
+    .assuntos{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    h4{
+        text-align: center;
+    }
+
+     main h3{
+        text-align: center;
+    }
+
+    section{
+        height: 200vh;
+    }
+}
+
+@media(max-width: 400px){
+     section{
+        height: 170vh;
+    }
+}
